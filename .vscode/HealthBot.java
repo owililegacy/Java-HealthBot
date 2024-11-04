@@ -35,6 +35,7 @@ public class HealthBot {
         generalResponses.put("sick", "Oh no! What symptoms are you experiencing?");
         generalResponses.put("feeling unwell", "I'm sorry to hear that. Let me know what symptoms you're experiencing, and I'll do my best to assist.");
         generalResponses.put("okay", "Alright. I'm here if you need any help.");
+        generalResponses.put("sores", "If the sores are painful, spreading, or showing signs of infection (like increased redness or pus), I recommend consulting a healthcare professional for a proper evaluation.");
         generalResponses.put("feeling sleepy", "Feeling sleepy is natural, especially if you've had a long day. Are you finding yourself feeling this way frequently?");
         generalResponses.put("how do you work", "I respond to keywords related to health and provide helpful information based on your input.");
         generalResponses.put("what can you do", "I can provide information on general health, symptoms of various conditions, and recommend seeing a healthcare provider when necessary.");
@@ -74,7 +75,7 @@ public class HealthBot {
             if (condition.matches(normalizedInput)) {
                 return condition.getResponse();
             }
-        }
+        } 
 
         // Check general responses if no health condition matched
         for (Map.Entry<String, String> entry : generalResponses.entrySet()) {

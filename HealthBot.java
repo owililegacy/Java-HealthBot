@@ -18,7 +18,7 @@ public class HealthBot {
         generalResponses.put("hello", "Hi there! How can I assist you with your health today?");
         generalResponses.put("hae", "Hi there! How can I assist you with your health today?");
         generalResponses.put("hi", "Hi there! How can I assist you with your health today?");
-        generalResponses.put("hola", "¡Hola! ¿Cómo estás? How are you doing today?");
+        generalResponses.put("hola", "¡Hola! ¿Cómo estás?");
         generalResponses.put("how are you", "I'm just a bot; I don't have feelings but I'm here to help you!");
         generalResponses.put("goodbye", "Goodbye! Take care and stay healthy!");
         generalResponses.put("thank you", "You're very welcome! I'm here to help whenever you need.");
@@ -52,6 +52,7 @@ public class HealthBot {
         generalResponses.put("blood pressure", "Blood pressure measures the force of blood against artery walls. Maintaining a healthy range is crucial to prevent heart disease.");
         generalResponses.put("cholesterol", "Cholesterol is a fatty substance in the blood. High levels can increase the risk of heart disease, so it's essential to keep it within a healthy range.");
         generalResponses.put("headache", "I'm sorry to hear that. Is it a frequent issue? Consider staying hydrated, and if it persists, please consult a healthcare provider.");
+        generalResponses.put("common cold", "I'm sorry to hear that.\nThe common cold is a viral infection of the upper respiratory tract, primarily affecting the mucosa of the nose and throat.\nIt is one of the most frequent illnesses, with adults experiencing an average of 2-3 colds per year and children often having even more.\nThis condition is caused by over 200 different viruses, with rhinoviruses being the most prevalent, responsible for approximately 30-40% of adult colds.");
 
         // Health conditions using the new HealthCondition class
         healthConditions.add(new HealthCondition(
@@ -63,7 +64,7 @@ public class HealthBot {
             Arrays.asList("chest pain", "shortness of breath", "fatigue","swelling in legs","dizziness","rapid heartbeat","nausea","cold sweats","indigestion","pain in jaw or back"),
             "These symptoms may indicate a heart condition. Please seek medical advice as soon as possible."
         ));
-    }
+          }
 
 
     public String getResponse(String userInput) {

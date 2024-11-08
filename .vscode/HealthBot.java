@@ -19,7 +19,7 @@ public class HealthBot {
         generalResponses.put("hello", "Hi there! How can I assist you with your health today?");
         generalResponses.put("hae", "Hi there! How can I assist you with your health today?");
         generalResponses.put("hi", "Hi there! How can I assist you with your health today?");
-        generalResponses.put("hola", "¡Hola! ¿Cómo estás? How are you doing today?");
+        generalResponses.put("hola", "¡Hola! ¿Cómo estás? ");
         generalResponses.put("how are you", "I'm just a bot; I don't have feelings but I'm here to help you!");
         generalResponses.put("goodbye", "Goodbye! Take care and stay healthy!");
         generalResponses.put("thank you", "You're very welcome! I'm here to help whenever you need.");
@@ -54,6 +54,8 @@ public class HealthBot {
         generalResponses.put("cholesterol", "Cholesterol is a fatty substance in the blood. High levels can increase the risk of heart disease, so it's essential to keep it within a healthy range.");
         generalResponses.put("headache", "I'm sorry to hear that. Is it a frequent issue? Consider staying hydrated, and if it persists, please consult a healthcare provider.");
         generalResponses.put("common cold", "I'm sorry to hear that.The common cold is a viral infection of the upper respiratory tract, primarily affecting the mucosa of the nose and throat. It is one of the most frequent illnesses, with adults experiencing an average of 2-3 colds per year and children often having even more. This condition is caused by over 200 different viruses, with rhinoviruses being the most prevalent, responsible for approximately 30-40% of adult colds.");
+        generalResponses.put("sore throat", "A sore throat can be caused by various factors, including viral infections, allergies, or irritants. Staying hydrated and using throat lozenges may help. If symptoms persist or worsen, please consult a healthcare provider.");
+
 
         // Health conditions using the new HealthCondition class
         healthConditions.add(new HealthCondition(
@@ -66,7 +68,7 @@ public class HealthBot {
             "These symptoms may indicate a heart condition. Please seek medical advice as soon as possible."
         ));
         healthConditions.add(new HealthCondition(
-            Arrays.asList("Runny or stuffy nose","Sore throat","Fatigue and body aches","Sneezing","Coughing"), 
+            Arrays.asList("runny nose", "stuffy nose", "sore throat", "fatigue", "body aches", "sneezing", "coughing"), 
             "These symptoms could indicate common cold."
         ));
     }

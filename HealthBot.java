@@ -53,6 +53,7 @@ public class HealthBot {
         generalResponses.put("cholesterol", "Cholesterol is a fatty substance in the blood. High levels can increase the risk of heart disease, so it's essential to keep it within a healthy range.");
         generalResponses.put("headache", "I'm sorry to hear that. Is it a frequent issue? Consider staying hydrated, and if it persists, please consult a healthcare provider.");
         generalResponses.put("common cold", "I'm sorry to hear that.\nThe common cold is a viral infection of the upper respiratory tract, primarily affecting the mucosa of the nose and throat.\nIt is one of the most frequent illnesses, with adults experiencing an average of 2-3 colds per year and children often having even more.\nThis condition is caused by over 200 different viruses, with rhinoviruses being the most prevalent, responsible for approximately 30-40% of adult colds.");
+        generalResponses.put("sore throat", "A sore throat can be caused by various factors, including viral infections, allergies, or irritants. Staying hydrated and using throat lozenges may help. If symptoms persist or worsen, please consult a healthcare provider.");
 
         // Health conditions using the new HealthCondition class
         healthConditions.add(new HealthCondition(
@@ -64,6 +65,11 @@ public class HealthBot {
             Arrays.asList("chest pain", "shortness of breath", "fatigue","swelling in legs","dizziness","rapid heartbeat","nausea","cold sweats","indigestion","pain in jaw or back"),
             "These symptoms may indicate a heart condition. Please seek medical advice as soon as possible."
         ));
+        healthConditions.add(new HealthCondition(
+             Arrays.asList("runny nose", "stuffy nose", "sore throat", "fatigue", "body aches", "sneezing", "coughing"), 
+            "These symptoms could indicate a common cold."
+        ));
+
           }
 
 
@@ -90,8 +96,7 @@ public class HealthBot {
     public static void main(String[] args) {
         HealthBot bot = new HealthBot();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hey there! How can I help you today?");
-
+       
         while (true) {
             System.out.print("You: ");
             String userInput = scanner.nextLine();
@@ -117,13 +122,18 @@ class HealthCondition {
 
     // Method to check if any of the symptoms match the user input
     public boolean matches(String userInput) {
+        userInput = TextUtils.normalizeInput(userInput); // Normalize user input once
+
         for (String symptom : symptoms) {
-            if (userInput.contains(symptom)) {
+            String normalizedSymptom = TextUtils.normalizeInput(symptom); // Normalize each symptom    
+            if (userInput.contains(normalizedSymptom)) {
+             
                 return true;
             }
         }
         return false;
     }
+    
 
     public String getResponse() {
         return response;

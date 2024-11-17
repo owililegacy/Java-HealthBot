@@ -25,6 +25,8 @@ public class HealthBot {
         generalResponses.put("thanks", "You're very welcome! Let me know if there's anything else I can do for you.");
         generalResponses.put("yes", "Great! How can I assist you further?");
         generalResponses.put("sores", "If the sores are painful, spreading, or showing signs of infection (like increased redness or pus), I recommend consulting a healthcare professional for a proper evaluation.");
+        generalResponses.put("dehydration", "On that you need to take at least 8 glasses of water a day");
+        generalResponses.put("dehydrated", "On that you need to take at least 8 glasses of water a day");
         generalResponses.put("feeling lonely", "I'm here for you! Feeling lonely can be tough, but it's important to remember that you're not alone in experiencing these feelings.Have you tried reaching out to some one.");
         generalResponses.put("no", "Alright, feel free to ask if you have any questions.");
         generalResponses.put("help", "Of course! Please tell me what you need help with, and I'll do my best to assist.");

@@ -61,6 +61,9 @@ public class HealthBot {
         generalResponses.put("cough", "A cough may be caused by infections, allergies, or irritants. Drinking warm fluids and using a humidifier may soothe it. Over-the-counter cough medications can help with symptoms, but if the cough persists or is accompanied by other symptoms, please consult a healthcare provider.");
         generalResponses.put("earache", "An earache can result from infections, sinus issues, or even changes in altitude. Applying a warm compress and taking over-the-counter pain relievers may provide relief. If the pain persists or is accompanied by fever or hearing loss, please consult a healthcare provider.");
         generalResponses.put("nausea", "Nausea can be caused by various factors, including motion sickness, food poisoning, or underlying medical conditions. Staying hydrated and consuming bland foods like crackers or toast may help ease the discomfort. Over-the-counter medications like antihistamines can also provide relief. If nausea persists or is accompanied by severe symptoms like vomiting, abdominal pain, or fever, please consult a healthcare provider.");
+        generalResponses.put("depression and how to conquer it","I'm really sorry to hear that you're feeling this way. You're not alone, and there are steps you can take to feel better. Talking to someone you trust, like a friend or family member, can help. Consider reaching out to a therapist or counselor—they're trained to support you through this. Taking small steps, like getting some fresh air or engaging in activities you enjoy, can also make a difference. Remember, healing takes time, and it's okay to seek help. You matter."
+);
+
 
 
         // Health conditions using the new HealthCondition class
